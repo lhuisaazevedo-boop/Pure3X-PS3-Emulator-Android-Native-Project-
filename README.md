@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/lhuisaazevedo-boop/Pure3X-PS3-Emulator-Android-Native-Project-/main/IMG_20260517_221647.png" align="center"> Pure3X (PS3 Emulator for Android)
+# <img src="IMG_20260517_221647.png" align="center"> Pure3X (PS3 Emulator for Android)
 
 ## 📌 Sobre o Projeto
 O Pure3X é um projeto experimental focado no desenvolvimento e estudo da emulação do console PlayStation 3 (PS3) para a plataforma Android. O objetivo principal é explorar os limites do hardware móvel atual e entender a arquitetura complexa do Cell Broadband Engine rodando diretamente em dispositivos ARM64.

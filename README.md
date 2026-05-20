@@ -1,10 +1,33 @@
-# <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3X - PS3 Emulator for Android
+# <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3X Engine v1.8 - PS3 Emulator for Android
 
-## 📌 Sobre o Projeto
+## 🪖 Apresentação Oficial
 
-**Pure3X** é um emulador nativo de PlayStation 3 para Android, desenvolvido **completamente do zero** com código C++ puro, sem qualquer cópia de projetos existentes. O projeto explora os limites da otimização mobile e oferece uma experiência de emulação fluida e responsiva.
+**Pure3X Engine** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em trazer **performance ARM64 nativa real** para celulares, sem depender de cópias de códigos de terceiros.
 
-> 🎯 **Objetivo Principal:** Criar um emulador funcional de PS3 que rode nativamente em smartphones Android, com foco em otimização de baixo nível e máximo desempenho.
+### ⚡ Características Principais
+
+- **Arquitetura ARM64 Pura:** Construído completamente de forma nativa para extrair o máximo dos processadores mobile modernos de 64 bits.
+- **Pegada Ultra-Leve:** A build de release é altamente otimizada, pesando apenas **6.06MB**. Sem lixo eletrônico, sem dependências inúteis.
+- **Código Próprio:** Desenvolvido de forma independente, inspirado por filosofias de desenvolvimento limpo como o projeto do emulador **Play!**.
+
+---
+
+## 🛠️ Nos Bastidores
+
+- **Nome do Pacote:** `com.lhuis.pure3x`
+- **Target SDK:** 30 (Android 11+) com testes de compatibilidade total até o **Android 16**
+- **Cache de build otimizado** e linhas de produção limpas para estabilidade máxima
+- **Build Recorde:** Compilação em apenas **20 segundos** direto no celular
+
+---
+
+## 📢 Política de Desenvolvimento
+
+Este projeto está passando por **testes rigorosos em ambiente privado e controlado** antes de qualquer lançamento público. Acreditamos que lançamentos apressados comprometem a qualidade. 
+
+**Todas as atualizações principais, testes de performance e caça a bugs são resolvidos internamente para garantir uma base sólida como rocha.**
+
+> Desenvolvido independentemente por **Lhuis**. Código limpo, poder nativo.
 
 ---
 
@@ -15,6 +38,8 @@
 * **Público-alvo:** Desenvolvedores, entusiastas de emulação e testadores de hardware
 * **Plataforma de Teste Principal:** Redmi 15 (Snapdragon 685 | HyperOS 3 / Android 16 Baklava)
 * **Status Geral:** ✅ **EMULADOR FUNCIONAL COM PERFORMANCE OTIMIZADA**
+
+> 🎯 **Objetivo Principal:** Criar um emulador funcional de PS3 que rode nativamente em smartphones Android, com foco em otimização de baixo nível e máximo desempenho.
 
 ---
 
@@ -52,7 +77,7 @@ O projeto utiliza uma abordagem híbrida de alto desempenho, dividida em duas ca
 
 ## 📊 Sistema de Dashboard (v0.0.3 - Novo!)
 
-### 1️⃣ Painel Principal (Dashboard)
+### Painel Principal (Dashboard)
 O dashboard oferece monitoramento completo em tempo real do estado do emulador:
 
 #### **Status do Engine**
@@ -78,10 +103,8 @@ O dashboard oferece monitoramento completo em tempo real do estado do emulador:
 
 ## ⚙️ Sistema de Configurações Avançadas (v0.0.3 - Novo!)
 
-### 2️⃣ Menu de Configurações (Settings)
+### Menu de Configurações (Settings)
 Aqui é onde a mágica da otimização acontece. O sistema se divide em **três pilares principais**:
-
----
 
 ### **A. Configurações de Gráficos & Renderização** 🎨
 
@@ -181,7 +204,7 @@ Perfis inteligentes com otimização automática:
 * ✅ Arquitetura híbrida Java + C++ Nativo implementada
 * ✅ Primeiro boot com sucesso absoluto na tela
 * ✅ Validação de ferramentas (CMake, NDK moderno)
-* ✅ Ambiente de compilaç��o totalmente funcional
+* ✅ Ambiente de compilação totalmente funcional
 
 ### 🔵 **v0.0.2-alpha** - Interface Imersiva & Firmware Base ✅
 * ✅ **Visual Clean Console:** Layout radical com fundo preto absoluto (`#050505`)

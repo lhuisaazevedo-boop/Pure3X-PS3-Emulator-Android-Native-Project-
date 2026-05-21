@@ -2,13 +2,14 @@
 
 ## 🪖 Apresentação Oficial
 
-**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em máxima performance e estabilidade.
+**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em emulação nativa de PS3 com máximo desempenho e otimização.
 
 ### ⚡ Características Principais
 
 - **Arquitetura ARM64 Pura:** Construído completamente de forma nativa para extrair o máximo dos processadores mobile modernos de 64 bits.
 - **Pegada Ultra-Leve:** A build de release é altamente otimizada, pesando apenas **6.06MB**. Sem lixo eletrônico, sem dependências inúteis.
 - **Código Próprio:** Desenvolvido de forma independente, inspirado por filosofias de desenvolvimento limpo como o projeto do emulador **Play!**.
+- **Renderização 2D Fluida:** Motor gráfico 2D otimizado rodando smooth no Redmi 15
 
 ---
 
@@ -18,14 +19,17 @@
 - **Target SDK:** 30 (Android 11+) com testes de compatibilidade total até o **Android 16**
 - **Cache de build otimizado** e linhas de produção limpas para estabilidade máxima
 - **Build Recorde:** Compilação em apenas **20 segundos** direto no celular
+- **Debug Release:** Iniciado rastreamento de bugs até versão oficial 2.0.0
 
 ---
 
 ## 📢 Política de Desenvolvimento
 
-Este projeto está passando por **testes rigorosos em ambiente privado e controlado** antes de qualquer lançamento público. Acreditamos que lançamentos apressados comprometem a qualidade. 
+Este projeto está em **fase de lançamento debug (v1.8-debug)** para testes rigorosos e caça de bugs antes da versão oficial 2.0.0. 
 
-**Todas as atualizações principais, testes de performance e caça a bugs são resolvidos internamente para garantir uma base sólida como rocha.**
+**Estrutura de Lançamento:**
+- 🔴 **v1.8-debug.apk** - Debug release atual (caçando erros)
+- ✅ **v2.0.0** - Versão oficial (código limpo, bem organizado, zero bugs conhecidos)
 
 > Desenvolvido independentemente por **Lhuis**. Código limpo, poder nativo.
 
@@ -33,13 +37,14 @@ Este projeto está passando por **testes rigorosos em ambiente privado e control
 
 ## 🚀 Status Atual do Desenvolvimento
 
-### 🎮 Versão: **v0.0.3-alpha** (Ativa) 🔥
-* **Fase:** Emulador Rodando Liso / Otimização de Sistema
-* **Público-alvo:** Desenvolvedores, entusiastas de emulação e testadores de hardware
+### 🎮 Versão: **v0.0.4-alpha** (Ativa) 🔥
+* **Fase:** Renderização 2D + JIT Ativo + Debug Release Iniciado
+* **Build:** Pure3XPro-debug.apk v1.8
+* **Público-alvo:** Testadores, desenvolvedores e entusiastas de emulação
 * **Plataforma de Teste Principal:** Redmi 15 (Snapdragon 685 | HyperOS 3 / Android 16 Baklava)
-* **Status Geral:** ✅ **EMULADOR FUNCIONAL COM PERFORMANCE OTIMIZADA - CÓDIGO ESTÁVEL SEM BUGS**
+* **Status Geral:** ✅ **2D RENDERIZAÇÃO SUAVE | JIT COMPILAÇÃO ATIVA | TEMA NEON IMPLEMENTADO | AUTO-DETECT CAPS FUNCIONAL**
 
-> 🎯 **Objetivo Principal:** Criar um emulador funcional de PS3 que rode nativamente em smartphones Android, com foco em otimização de baixo nível e máximo desempenho.
+> 🎯 **Objetivo Atual:** Finalizar otimizações do core C++, eliminar bugs e preparar v2.0.0 oficial
 
 ---
 
@@ -52,30 +57,35 @@ O projeto utiliza uma abordagem híbrida de alto desempenho, dividida em duas ca
 * **Linguagem:** Java com integração nativa ao ecossistema Android
 * **Função:** 
   - Interface gráfica imersiva com tema escuro (`#050505`)
+  - **Tema Neon Gamer:** Verde/Ciano vibrante com acentos RGB ✅
   - Menus de configuração e mapeamento de botões
   - ROM Loader para leitura de ISOs do cartão SD
-  - Contador FPS em tempo real
+  - Contador FPS em tempo real ✅
   - Simulação visual de firmware PS3
-  - **Dashboard inteligente com monitoramento real-time**
-  - **Painel de configurações avançadas de performance**
-* **Status v0.0.3:** ✅ Interface completa com Dashboard e Settings implementados
+  - Dashboard inteligente com monitoramento real-time
+  - Painel de configurações avançadas de performance
+* **Status v0.0.4:** ✅ Interface com Dashboard, Settings e Tema Neon implementados
 
 ### 2️⃣ JNI Bridge & Core Backend (C++ Nativo)
 * **Ambiente:** C++ puro integrado via CMake e Android NDK
 * **Linguagem:** C++ 17/20 (código otimizado para ARM64)
 * **Função:** 
   - Comunicação direta de baixo nível com o hardware
+  - **Renderização 2D Fluida** ✅ (Rodando suave)
+  - **JIT Compilação Ativa** ✅ (Tradução dinâmica de instruções)
+  - **Auto-Detect de Performance Caps** ✅ (Detecção automática de limites)
   - Emulação do processador Cell Engine do PS3
   - Renderização gráfica pesada via Vulkan
   - Gerenciamento de memória otimizado
   - Tradução de instruções CPU em tempo real
-  - **Monitoramento de temperatura em tempo real**
-  - **Gerenciamento dinâmico de recursos**
+  - Monitoramento de temperatura em tempo real
+  - Gerenciamento dinâmico de recursos
 * **Arquivo Principal:** `Pure3xpro PS3.cxx`
+* **Status:** 🔧 Otimizações de core em progresso
 
 ---
 
-## 📊 Sistema de Dashboard (v0.0.3 - Novo!)
+## 📊 Sistema de Dashboard (v0.0.4 - Aprimorado!)
 
 ### Painel Principal (Dashboard)
 O dashboard oferece monitoramento completo em tempo real do estado do emulador:
@@ -86,27 +96,32 @@ O dashboard oferece monitoramento completo em tempo real do estado do emulador:
 
 #### **Monitor de Performance (Real-time)**
 - 📊 **Uso de CPU e GPU:** Percentual de utilização com gráfico dinâmico
-- ⏱️ **Taxa de Quadros (FPS):** Display em tempo real (Alvo: 60.0 FPS)
+- ⏱️ **Taxa de Quadros (FPS):** Display em tempo real (Alvo: 60.0 FPS) ✅
 - 🌡️ **Temperatura do Dispositivo:** Monitoramento crítico com alertas
   - Verde: 🟢 Normal (< 45°C)
   - Amarelo: 🟡 Quente (45-55°C)
   - Vermelho: 🔴 Crítico (> 55°C)
-  - **Proteção Anti-Thermal:** Throttling automático para evitar danos ao Redmi 15
+  - **Proteção Anti-Thermal:** Throttling automático para evitar danos
 
 #### **Informações de Sistema**
 - Chipset: Snapdragon 685 (ARM64)
 - RAM Disponível / Total
 - Firmware PS3 Ativo: 4.93
 - Versão do Build
+- **Status JIT:** Ativo/Inativo ✅
 
 ---
 
-## ⚙️ Sistema de Configurações Avançadas (v0.0.3 - Novo!)
+## ⚙️ Sistema de Configurações Avançadas (v0.0.4 - Aprimorado!)
 
 ### Menu de Configurações (Settings)
-Aqui é onde a mágica da otimização acontece. O sistema se divide em **três pilares principais**:
+Sistema de otimização dividido em **três pilares principais**:
 
 ### **A. Configurações de Gráficos & Renderização** 🎨
+
+#### **Renderização 2D**
+- [x] **Ativo** - Motor 2D rodando suave ✅
+- Otimização Vulkan para sprites e composição
 
 #### **Resolução Interna**
 - [ ] **1x** - Resolução Base (Máxima Compatibilidade)
@@ -126,7 +141,7 @@ Aqui é onde a mágica da otimização acontece. O sistema se divide em **três 
 - [x] **60 FPS** - Modo Balanceado (Padrão)
 - [ ] **120 FPS** - Desempenho máximo (sujeito a hardware)
 - [ ] **Desbloqueado** - Sem limite (requer refrigeração excelente)
-- **Status:** Sincronização nativa via Vulkan
+- **Status:** Auto-detect de caps ✅ | Sincronização nativa via Vulkan
 
 ---
 
@@ -157,6 +172,14 @@ Perfis inteligentes com otimização automática:
   - **Uso:** Testes de benchmark / Títulos exigentes
   - ⚠️ **Aviso:** Alto consumo de bateria e calor
 
+#### **JIT Compilação** 🔥
+- [x] **JIT Ativo** (Padrão) ✅
+  - Tradução dinâmica de instruções Cell Engine
+  - Cache de código compilado otimizado
+  - Suporte a ARM64 native
+- [ ] Desativar (Para debug/compatibilidade)
+- **Status:** Compilação em tempo real funcional
+
 #### **Gerenciamento de Memória** 🧠
 - **Limpeza de Cache:** Botão manual + agendamento automático
 - **Otimização de RAM:** Dedicar espaço para emulação
@@ -185,16 +208,16 @@ Perfis inteligentes com otimização automática:
 - **Status:** Remapeamento em tempo real funcional
 
 #### **Estilo do Menu**
-- [ ] **Tema Escuro Clássico** (`#050505` - Padrão)
+- [ ] **Tema Escuro Clássico** (`#050505`)
   - Ideal para economia de bateria em OLED
   - Reduz fadiga ocular em sessões longas
-- [ ] **Tema Neon Gamer** 
+- [x] **Tema Neon Gamer** ✅
   - Verde/Ciano vibrante com acentos RGB
   - Visual futurístico e moderno
-  - Perfeito para streaming
+  - Perfeito para streaming e gameplay
 - [ ] **Tema Light Mode**
   - Modo claro otimizado
-- **Status:** Sistema de temas implementado
+- **Status:** Sistema de temas implementado e ativo
 
 ---
 
@@ -214,22 +237,44 @@ Perfis inteligentes com otimização automática:
 * ✅ **Estabilidade Android 16:** Eliminação completa de crashes de memória
 * ✅ **Código 100% Original:** Desenvolvido do zero, sem dependências externas
 
-### 🟢 **v0.0.3-alpha** - Dashboard & Sistema de Configurações (ATUAL) 🔥
+### 🟢 **v0.0.3-alpha** - Dashboard & Sistema de Configurações ✅
 * ✅ **Painel Principal Inteligente:** Dashboard com monitoramento real-time de CPU/GPU/Temperatura
 * ✅ **Status do Engine:** Indicador visual dinâmico [Ativo/Inativo]
 * ✅ **Monitor de Performance:** FPS em tempo real + Gráficos dinâmicos
 * ✅ **Proteção Térmica:** Sistema anti-thermal com throttling automático
-  - Verde: 🟢 Normal (<45°C)
-  - Amarelo: 🟡 Quente (45-55°C)
-  - Vermelho: 🔴 Crítico (>55°C)
 * ✅ **Configurações de Gráficos:** Resolução (1x/1.5x/2x), Filtro Anisotrópico, FPS Cap
 * ✅ **Perfis de Performance:** Economia, Balanceado, Ultra Performance
 * ✅ **Gerenciamento de Memória:** Cache inteligente + Preload de Shaders
 * ✅ **Multithreading Otimizado:** Suporte completo a ARM64 octa-core
 * ✅ **Mapeamento de Controles:** Gamepad externo + Remapeamento personalizado
 * ✅ **Sistema de Temas:** Escuro, Neon Gamer e Light Mode
-* ✅ **Emulador Rodando Liso:** Desempenho estável e otimizado no Redmi 15
-* ✅ **Estabilidade Comprovada:** Zero crashes com gerenciamento de recursos robusto
+
+### 🟡 **v0.0.4-alpha** - Renderização 2D + JIT + Debug Release (ATUAL) 🔥
+* ✅ **Renderização 2D Fluida:** Motor gráfico 2D rodando suave no Redmi 15
+* ✅ **JIT Compilação Ativa:** Tradução dinâmica de instruções em tempo real
+* ✅ **Tema Neon Implementado:** Interface verde/ciano com acentos RGB vibrantes
+* ✅ **FPS Counter Funcional:** Contador em tempo real 60.0 FPS ✅
+* ✅ **Auto-Detect Performance Caps:** Detecção automática de limites do hardware
+* ✅ **Debug Release Iniciado:** Pure3XPro-debug.apk v1.8 para rastreamento de bugs
+* 🔧 **Core C++ em Otimização:** Melhorias contínuas na emulação Cell Engine
+* 📋 **Roadmap para v2.0.0:** Código limpo, bem organizado, zero bugs conhecidos
+
+---
+
+## 🎯 Estratégia de Lançamento
+
+### 📦 **Fase 1: Debug Release (v1.8-debug)**
+- **Status:** 🔴 ATIVA
+- **Arquivo:** `Pure3XPro-debug.apk`
+- **Objetivo:** Testes rigorosos e caça de bugs
+- **Foco:** Estabilidade, otimizações de core, feedback de performance
+- **Duração:** Até eliminação de bugs críticos
+
+### 🚀 **Fase 2: Release Oficial (v2.0.0)**
+- **Status:** 📋 PLANEJADA
+- **Objetivo:** Lançamento limpo, bem organizado
+- **Características:** Zero bugs conhecidos, código refatorado
+- **Publicação:** Google Play e GitHub Releases
 
 ---
 
@@ -243,6 +288,8 @@ Perfis inteligentes com otimização automática:
 | **Build System** | CMake | ✅ Otimizado |
 | **SDK Nativo** | Android NDK Moderno | ✅ Integrado |
 | **API Gráfica** | Vulkan | ✅ Implementado |
+| **Renderização 2D** | Vulkan + Custom Renderer | ✅ Ativo |
+| **JIT Compilação** | Custom Dynamic Translator | ✅ Ativo |
 | **Target OS** | Android 16 (HyperOS 3) | ✅ Full Support |
 | **Arquitetura** | ARM64 | ✅ Otimizado |
 | **Chipset Alvo** | Snapdragon 685 | ✅ Testado |
@@ -270,33 +317,50 @@ Para compilar e testar o Pure3XPro com melhor desempenho, recomenda-se:
 - 📱 **Redmi 15** com Snapdragon 685
 - 🔧 HyperOS 3 / Android 16 Baklava
 - ✅ Compilação em 20 segundos
-- ✅ **Emulador rodando em 60.0 FPS estáveis**
+- ✅ **2D Renderização suave em 60.0 FPS**
+- ✅ **JIT Compilação ativa e funcional**
 - ✅ **Temperatura controlada: 35-42°C em operação normal**
+- ✅ **Tema Neon visual impecável**
 
 ---
 
 ## 🎯 Roadmap (Próximos Passos)
 
-### 📋 v0.0.4 (Próxima)
+### 📋 v0.0.5 (Próxima)
+- [ ] **Caça de Bugs Críticos** (Debug release)
 - [ ] Otimização completa do arquivo `Pure3xpro PS3.cxx`
-- [ ] Remoção da ActionBar para tela cheia imersiva de console
-- [ ] Substituição do ícone padrão pela Logo Oficial do Pure3XPro Engine
-- [ ] Preparação do motor 2D para testes de carregamento de sprites
-- [ ] Emulação preliminar do processador Cell Engine
+- [ ] Refatoração de código para v2.0.0
+- [ ] Remoção da ActionBar para tela cheia imersiva
+- [ ] Substituição do ícone padrão pela Logo Oficial Pure3XPro Engine
+- [ ] Melhorias em performance do JIT
+- [ ] Testes extensivos de estabilidade
 
-### 🔧 v0.0.5+
-- [ ] Tradução JIT das instruções da CPU
-- [ ] Renderização 3D completa via Vulkan
+### 🔧 v1.9-debug
+- [ ] Correção de bugs reportados
+- [ ] Otimizações incrementais
+- [ ] Melhorias de performance
+- [ ] Testes de compatibilidade expandidos
+
+### 🚀 v2.0.0-official (Release)
+- [ ] Código limpo e bem organizado
+- [ ] Zero bugs conhecidos
+- [ ] Emulação preliminar do Cell Engine funcional
+- [ ] Suporte a renderização 3D básica via Vulkan
 - [ ] Suporte a audio do PS3
+- [ ] Publicação oficial em Google Play
+
+### 🎮 v2.0.5+
+- [ ] Tradução JIT completa das instruções da CPU
+- [ ] Renderização 3D avançada via Vulkan
 - [ ] Testes com ISOs reais do PS3
 - [ ] Otimização de compatibilidade com títulos populares
+- [ ] Suporte a múltiplos chipsets
 
-### 🚀 Longo Prazo
+### 🌟 Longo Prazo
 - [ ] Otimização JIT/Vulkan completa
 - [ ] Subida gradual de compatibilidade com jogos
-- [ ] Suporte a múltiplos chipsets
-- [ ] Publicação de builds beta público
 - [ ] Comunidade de contribuidores
+- [ ] Beta público em Google Play
 
 ---
 
@@ -317,6 +381,7 @@ Para compilar e testar o Pure3XPro com melhor desempenho, recomenda-se:
 3. Build > Compile Project
 4. Tempo esperado: ~20 segundos
 5. APK gerado em: /build/outputs/apk/
+6. Debug APK: Pure3XPro-debug.apk
 ```
 
 ### Build no PC (Opcional)
@@ -335,7 +400,7 @@ Se você é desenvolvedor, entusiasta de emulação ou quer ajudar:
 
 1. 🍴 **Faça um Fork** do projeto
 2. 📝 **Abra uma Issue** com sugestões de otimização ou bugs encontrados
-3. 💬 **Compartilhe feedback** sobre performance e estabilidade
+3. 💬 **Compartilhe feedback** sobre performance e estabilidade (v1.8-debug)
 4. 🐛 **Reporte bugs** com logs detalhados e informações do dispositivo
 5. 📚 **Melhore a documentação** com suas descobertas
 6. 🔧 **Envie Pull Requests** com melhorias comprovadas
@@ -349,10 +414,11 @@ O Pure3XPro inclui um sistema nativo de logging que monitora:
 - ⏱️ **FPS em tempo real** (Alvo: 60.0 FPS - Ativo ✅)
 - 🧠 **Uso de memória** (Alocação dinâmica com proteção de overflow)
 - 🌡️ **Temperatura do chipset** (Com alertas e throttling automático)
-- 📊 **Tempo de renderização** por frame (Vulkan profiling)
-- 🔧 **Status de compilação** JIT (Otimização em tempo real)
+- 📊 **Tempo de renderização 2D** por frame (Vulkan profiling) ✅
+- 🔧 **Status de compilação JIT** (Otimização em tempo real) ✅
 - ⚡ **Consumo de CPU/GPU** (Percentual e watts estimado)
 - 🎮 **Latência de input** (Garantido < 16ms para 60 FPS)
+- 🎨 **Performance de renderização 2D** (FPS e cache hits)
 
 ---
 
@@ -371,10 +437,22 @@ Respeite os direitos autorais e termos de serviço dos respectivos detentores de
 - 📱 Otimizado para ecossistema Xiaomi/Poco
 - 🔥 Tempo de compilação recorde: 20 segundos
 - 🎯 Manutenção contínua com updates frequentes
-- 🚀 **Emulador rodando liso em 60.0 FPS estáveis**
+- 🚀 **2D Renderização suave em 60.0 FPS ✅**
 - 🌡️ **Gerenciamento térmico inteligente implementado**
 - ⚙️ **Sistema de configurações avançadas ativo**
+- 🔥 **JIT Compilação ativa e funcional**
+- 🎨 **Tema Neon visual impecável**
+
+---
+
+## 📊 Status do Build Atual
+
+**Release:** Pure3XPro-debug.apk v1.8  
+**Versão:** v0.0.4-alpha  
+**Status:** 🔴 Debug Release - Caçando bugs até v2.0.0  
+**Próximo:** Refatoração e otimização para release oficial limpo
 
 ---
 
 *Made with ❤️ and pure C++ passion. From developer to developer!* 🚀📲🎮
+

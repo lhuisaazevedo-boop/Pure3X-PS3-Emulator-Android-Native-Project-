@@ -1,8 +1,8 @@
-# <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3X Engine v1.8 - PS3 Emulator for Android
+# <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3XPro v1.8 - PS3 Emulator for Android
 
 ## 🪖 Apresentação Oficial
 
-**Pure3X Engine** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em trazer **performance ARM64 nativa real** para celulares, sem depender de cópias de códigos de terceiros.
+**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em máxima performance e estabilidade.
 
 ### ⚡ Características Principais
 
@@ -14,7 +14,7 @@
 
 ## 🛠️ Nos Bastidores
 
-- **Nome do Pacote:** `com.lhuis.pure3x`
+- **Nome do Pacote:** `com.lhuis.pure3xpro`
 - **Target SDK:** 30 (Android 11+) com testes de compatibilidade total até o **Android 16**
 - **Cache de build otimizado** e linhas de produção limpas para estabilidade máxima
 - **Build Recorde:** Compilação em apenas **20 segundos** direto no celular
@@ -37,13 +37,13 @@ Este projeto está passando por **testes rigorosos em ambiente privado e control
 * **Fase:** Emulador Rodando Liso / Otimização de Sistema
 * **Público-alvo:** Desenvolvedores, entusiastas de emulação e testadores de hardware
 * **Plataforma de Teste Principal:** Redmi 15 (Snapdragon 685 | HyperOS 3 / Android 16 Baklava)
-* **Status Geral:** ✅ **EMULADOR FUNCIONAL COM PERFORMANCE OTIMIZADA**
+* **Status Geral:** ✅ **EMULADOR FUNCIONAL COM PERFORMANCE OTIMIZADA - CÓDIGO ESTÁVEL SEM BUGS**
 
 > 🎯 **Objetivo Principal:** Criar um emulador funcional de PS3 que rode nativamente em smartphones Android, com foco em otimização de baixo nível e máximo desempenho.
 
 ---
 
-## 💻 Arquitetura de Desenvolvimento (Pure3X Engine)
+## 💻 Arquitetura de Desenvolvimento (Pure3XPro Engine)
 
 O projeto utiliza uma abordagem híbrida de alto desempenho, dividida em duas camadas complementares:
 
@@ -71,7 +71,7 @@ O projeto utiliza uma abordagem híbrida de alto desempenho, dividida em duas ca
   - Tradução de instruções CPU em tempo real
   - **Monitoramento de temperatura em tempo real**
   - **Gerenciamento dinâmico de recursos**
-* **Arquivo Principal:** `Pure3x PS3.cxx`
+* **Arquivo Principal:** `Pure3xpro PS3.cxx`
 
 ---
 
@@ -252,7 +252,7 @@ Perfis inteligentes com otimização automática:
 
 ## ⚙️ Requisitos de Hardware (Para Testes)
 
-Para compilar e testar o Pure3X com melhor desempenho, recomenda-se:
+Para compilar e testar o Pure3XPro com melhor desempenho, recomenda-se:
 
 ### Mínimos
 - 📱 **Processador:** Snapdragon 680+ ou equivalente
@@ -278,9 +278,9 @@ Para compilar e testar o Pure3X com melhor desempenho, recomenda-se:
 ## 🎯 Roadmap (Próximos Passos)
 
 ### 📋 v0.0.4 (Próxima)
-- [ ] Otimização completa do arquivo `Pure3x PS3.cxx`
+- [ ] Otimização completa do arquivo `Pure3xpro PS3.cxx`
 - [ ] Remoção da ActionBar para tela cheia imersiva de console
-- [ ] Substituição do ícone padrão pela Logo Oficial do Pure3X Engine
+- [ ] Substituição do ícone padrão pela Logo Oficial do Pure3XPro Engine
 - [ ] Preparação do motor 2D para testes de carregamento de sprites
 - [ ] Emulação preliminar do processador Cell Engine
 
@@ -344,7 +344,7 @@ Se você é desenvolvedor, entusiasta de emulação ou quer ajudar:
 
 ## 📱 Sistema de Logs & Performance
 
-O Pure3X inclui um sistema nativo de logging que monitora:
+O Pure3XPro inclui um sistema nativo de logging que monitora:
 
 - ⏱️ **FPS em tempo real** (Alvo: 60.0 FPS - Ativo ✅)
 - 🧠 **Uso de memória** (Alocação dinâmica com proteção de overflow)

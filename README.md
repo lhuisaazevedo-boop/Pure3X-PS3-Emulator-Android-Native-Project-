@@ -1,8 +1,21 @@
+# Pure3XEngenie - SOLUÇÕES DE ENGENHARIA DE PRECISÃO
+
+<div align="center">
+
+![Pure3XEngenie Logo](https://github.com/lhuisaazevedo-boop/Pure3X-PS3-Emulator-Android-Native-Project-/raw/main/pure3xengenie-banner.png)
+
+### **Native PS3 Emulation Engine para Android**
+### Zero Fricção de Dispositivo | ARM64 Puro | Máximo Desempenho
+
+</div>
+
+---
+
 # <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3XPro v1.8 - PS3 Emulator for Android
 
 ## 🪖 Apresentação Oficial
 
-**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em emulação nativa de PS3 com máximo desempenho e otimização.
+**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em engenharia de precisão e máximo desempenho nativo.
 
 ### ⚡ Características Principais
 
@@ -455,4 +468,3 @@ Respeite os direitos autorais e termos de serviço dos respectivos detentores de
 ---
 
 *Made with ❤️ and pure C++ passion. From developer to developer!* 🚀📲🎮
-

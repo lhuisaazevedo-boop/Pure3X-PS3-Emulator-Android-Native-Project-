@@ -11,11 +11,9 @@
 
 ---
 
-# <img src="IMG_20260517_221647.jpg" width="45" align="center"> Pure3XPro v1.8 - PS3 Emulator for Android
-
 ## 🪖 Apresentação Oficial
 
-**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em engenharia de precisão e máximo desempenho nativo.
+**Pure3XPro** é um projeto de emulação independente para dispositivos móveis, criado do zero absoluto. Este projeto é o resultado de **2 anos de estudos profundos de arquitetura**, focado em enge[...]
 
 ### ⚡ Características Principais
 
